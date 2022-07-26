@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import FilterableCustomTable from './TablePage'
+import React from 'react';
+
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <div>
+        <FilterableCustomTable/>
+      </div>
     </div>
   );
 }

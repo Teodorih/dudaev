@@ -2,7 +2,8 @@
 import { jsx, Container } from "theme-ui"
 
 import React, { useEffect, useState } from "react"
-
+import { ThemeProvider } from 'theme-ui'
+import { theme } from "./Theme"
 
 class OpenWindowsButtom extends React.Component{
     render(){
@@ -18,7 +19,7 @@ class CloseButton extends React.Component{
 
 class HiddenWindow extends React.Component{
     render(){
-        return(<div id="my_hidden_window" style={{height: "200px", width: "50px"}}> Hidden window <CloseButton/></div>)
+        return(<div id="my_hidden_window" style={{height: "200px", width: "50px"}}> <div>Hidden window</div> <CloseButton/></div>)
     }
 }
 
@@ -52,6 +53,15 @@ function OpenWindowButtonHookTwo(){
 class WindowPage extends React.Component{
     render(){
         return(<React.Fragment>
+             <ThemeProvider theme={theme}>
+                <h1
+                sx={{
+                    color: 'primary',
+                    fontFamily: 'heading',
+                }}>
+                Hello
+                </h1>
+            </ThemeProvider>
             <OpenWindowsButtom/><OpenWindowButtonHook/><HiddenWindow/><OpenWindowButtonHookTwo/>
         </React.Fragment>)
     }

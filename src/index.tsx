@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import FilterableCustomTable from './TablePage'
 import InputTest from './InputDudaev'
+import NewTable from './NewTable';
 
 const root_dom = document.getElementById('root')!;
 const root = ReactDOM.createRoot(root_dom);
@@ -26,6 +27,8 @@ root.render(
         <Route path="/drag" element={<DraggableSquere />}> </Route>
         <Route path="/window" element={<WindowPage />}> </Route>
         <Route path="/input" element={<InputTest />}> </Route>
+        <Route path="/new_table" element={<NewTable />}> </Route>
+
 
       </Routes>
     </BrowserRouter>

@@ -11,6 +11,7 @@ import {
   Route,
 } from "react-router-dom";
 import FilterableCustomTable from './TablePage'
+import InputTest from './InputDudaev'
 
 const root_dom = document.getElementById('root')!;
 const root = ReactDOM.createRoot(root_dom);
@@ -24,6 +25,7 @@ root.render(
         <Route path="/table" element={<FilterableCustomTable />}></Route>
         <Route path="/drag" element={<DraggableSquere />}> </Route>
         <Route path="/window" element={<WindowPage />}> </Route>
+        <Route path="/input" element={<InputTest />}> </Route>
 
       </Routes>
     </BrowserRouter>

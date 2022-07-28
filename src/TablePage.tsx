@@ -107,7 +107,7 @@ class CustomTable extends React.Component
             items.forEach((person) => {
                 rows.push(<PersonRow key={person.id} person={person}/>)
             })
-            return (<table>
+            return (<table id='custom_table'>
                 <thead>
                     <tr><th>id</th><th>name</th><th>date of birth</th></tr>
                     <CustomSorting 
